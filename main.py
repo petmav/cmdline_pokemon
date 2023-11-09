@@ -1,7 +1,6 @@
 import sys
 import gameprocess
 
-
 print('(N)ew Game')
 print('(L)oad Game')
 print('(E)xit')
@@ -9,11 +8,15 @@ print('(E)xit')
 while True:
 
       answer = input()
-
-      if answer == 'N': main_game()
-      elif answer == 'L': load_game()
-      elif answer == 'E': print('Exiting...'); sys.exit()
-      else: print('Invalid option. Try again.')
-
-
-
+      
+      match answer.upper():
+            case 'N':
+                  print("maingame")
+            case 'L':
+                  print("loadgame")
+            case 'E':
+                  print("exit")
+                  sys.exit()
+            case _:
+                  print("invalid")
+       
